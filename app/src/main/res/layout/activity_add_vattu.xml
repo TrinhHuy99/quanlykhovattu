@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
     tools:context=".AddVattu">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp">
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
 
         <ImageView
 
@@ -18,37 +20,37 @@
             android:layout_width="159dp"
             android:layout_height="159dp"
             android:layout_gravity="center"
-            android:src="@drawable/vattu"
-            />
+            android:src="@drawable/vattu" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_chuphinhvt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chụp hình"
-                />
+                android:text="Chụp hình" />
 
             <Button
                 android:id="@+id/btn_chonhinhvt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chọn hình"
-                />
+                android:text="Chọn hình" />
 
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="40sp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -73,7 +75,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="40sp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -94,17 +98,21 @@
         </EditText>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="40sp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40sp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Xuất xứ:     "
-            android:textSize="20sp"
             android:textColor="@color/black"
+            android:textSize="20sp"
             >
 
         </TextView>
@@ -118,28 +126,35 @@
         </EditText>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
         android:layout_marginTop="40sp"
-        android:gravity="center">
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/luu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="40sp"
+            android:text="Lưu"
             android:textSize="20sp"
-            android:text="Lưu">
+            android:background="@drawable/drawable_hinheclip"
+            app:backgroundTint="@color/design_default_color_secondary">
 
         </Button>
+
         <Button
             android:id="@+id/thoat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40sp"
+            android:text="Thoát"
             android:textSize="20sp"
-            android:text="Thoát">
+            android:background="@drawable/drawable_hinheclip"
+            app:backgroundTint="@color/design_default_color_error">
 
         </Button>
     </LinearLayout>
