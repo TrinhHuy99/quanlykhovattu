@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">QUẢN LÍ KHO</string>
+    <string name="dn">ĐĂNG NHẬP</string>
+    <string name="kho">KHO</string>
+    <string name="phieunhap">DS PHIẾU NHẬP</string>
+    <string name="vattu">VẬT TƯ</string>
+    <string name="phieuxuat">DS PHIẾU XUẤT</string>
+    <string name="tk">TÀI KHOẢN:  </string>
+    <string name="mk">MẬT KHẨU:  </string>
+    <string name="thoat">THOÁT</string>
+    <string name="baocao">BÁO CÁO</string>
+</resources>
