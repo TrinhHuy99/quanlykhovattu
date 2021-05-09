@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateVattu"
-    android:layout_margin="10dp">
+    android:background="@drawable/background"
+    tools:context=".UpdateVattu">
 
     <EditText
         android:id="@+id/editTextTen"
@@ -23,11 +23,12 @@
         android:id="@+id/editTextXuatXu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toEndOf="@+id/textViewXuatXu"
         app:layout_constraintTop_toBottomOf="@+id/editTextTen" />
 
@@ -35,30 +36,40 @@
         android:id="@+id/buttonLuu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="156dp"
         android:text="Lưu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextXuatXu" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextXuatXu"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@drawable/drawable_hinheclip"
+        app:backgroundTint="@color/design_default_color_secondary" />
 
     <Button
         android:id="@+id/buttonThoat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="156dp"
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:text="Thoát"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextXuatXu" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonLuu"
+        app:layout_constraintTop_toBottomOf="@+id/editTextXuatXu"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@drawable/drawable_hinheclip"
+        app:backgroundTint="@color/design_default_color_error"/>
 
     <ImageView
         android:id="@+id/hinh_kho"
         android:layout_width="159dp"
         android:layout_height="159dp"
         android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -69,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="96dp"
         android:text="Tên vật tư"
         android:textSize="18sp"
@@ -80,8 +91,8 @@
         android:id="@+id/textViewXuatXu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:layout_marginTop="88dp"
         android:text="Xuất xứ"
         android:textSize="18sp"
@@ -96,10 +107,10 @@
         android:text="Chụp hình"
         app:layout_constraintBottom_toTopOf="@+id/btn_chonhinhvt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toEndOf="@+id/hinh_kho"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.678" />
 
     <Button
         android:id="@+id/btn_chonhinhvt"
@@ -109,9 +120,9 @@
         android:text="Chọn hình"
         app:layout_constraintBottom_toTopOf="@+id/editTextTen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toEndOf="@+id/hinh_kho"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
