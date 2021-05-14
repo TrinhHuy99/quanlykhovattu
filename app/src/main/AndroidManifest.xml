@@ -30,6 +30,7 @@
         <activity android:name=".QuanLyKho"></activity>
         <activity android:name=".UpdateKho"></activity>
         <activity android:name=".QLTTKho"></activity>
+        <activity android:name=".BarChartActivity"></activity>
     </application>
 
 </manifest>
