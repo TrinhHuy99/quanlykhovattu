@@ -94,6 +94,13 @@ ImageButton kho,vattu,phieunhap,phieuxuat,baocao;
                 startActivity(nextScreen);
             }
         });
+        baocao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getApplicationContext(), BarChartActivity.class);
+                startActivity(nextScreen);
+            }
+        });
     }
 
 }
