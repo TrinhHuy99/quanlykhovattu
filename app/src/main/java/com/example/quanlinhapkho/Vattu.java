@@ -4,13 +4,15 @@ public class Vattu {
     public String MaVT;
     public String TenVT;
     public String XuatXu;
+    public String DVT;
     public byte[] hinh;
 
-    public Vattu(String maVT, String tenVT, String xuatXu, byte[] hinh) {
+    public Vattu(String maVT, String tenVT, String xuatXu, byte[] hinh,String dVT) {
         MaVT = maVT;
         TenVT = tenVT;
         XuatXu = xuatXu;
         this.hinh = hinh;
+        DVT = dVT;
     }
 
     public byte[] getHinh() {
@@ -43,5 +45,13 @@ public class Vattu {
 
     public void setXuatXu(String xuatXu) {
         XuatXu = xuatXu;
+    }
+
+    public String getDVT() {
+        return DVT;
+    }
+
+    public void setDVT(String DVT) {
+        this.DVT = DVT;
     }
 }

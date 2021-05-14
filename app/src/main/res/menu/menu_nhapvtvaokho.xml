@@ -14,12 +14,12 @@
         android:title="Thoát"
         app:showAsAction="collapseActionView" />
     <item
-        android:id="@+id/menu4"
+        android:id="@+id/menuthem"
         android:icon="@drawable/add_vt"
         app:showAsAction="always"
         android:title="TODO" />
     <item
-        android:id="@+id/menu5"
+        android:id="@+id/menusave"
         android:icon="@drawable/save"
         app:showAsAction="always"
         android:title="TODO" />

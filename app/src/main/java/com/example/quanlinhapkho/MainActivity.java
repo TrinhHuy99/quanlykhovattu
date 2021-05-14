@@ -80,6 +80,20 @@ ImageButton kho,vattu,phieunhap,phieuxuat,baocao;
                 startActivity(nextScreen);
             }
         });
+        phieunhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getApplicationContext(), QLPhieuNhap.class);
+                startActivity(nextScreen);
+            }
+        });
+        phieuxuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getApplicationContext(), QLPhieuXuat.class);
+                startActivity(nextScreen);
+            }
+        });
     }
 
 }

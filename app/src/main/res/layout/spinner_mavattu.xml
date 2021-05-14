@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imagehinh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+    <TextView
+        android:id="@+id/ten_vattu"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:layout_toEndOf="@+id/imagevt"
+        android:layout_toRightOf="@+id/imagevt"
+        android:text="TextView"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imagevt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/ma_vattu"
+        android:layout_width="69dp"
+        android:layout_height="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="282dp"
+        android:layout_marginRight="282dp"
+        android:layout_toEndOf="@+id/imagevt"
+        android:layout_toRightOf="@+id/imagevt"
+        android:text="TextView"
+        android:textSize="20dp" />
+</RelativeLayout>

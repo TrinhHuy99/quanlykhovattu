@@ -23,7 +23,7 @@ public class QLTTKho extends AppCompatActivity {
 
     final String DATABASE_NAME = "QUANLYKHOVATTU.db";
     SQLiteDatabase database;
-    String maKho = null;
+    String maKho = null, tenKho = null;
     ListView lv_TTKho;
     ArrayList<TTVatTu> list_ttKho;
     AdapterTTVatTu adapterTTVatTu;
@@ -49,6 +49,7 @@ public class QLTTKho extends AppCompatActivity {
                 finishAffinity();
                 System.exit(0);
                 break;
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -80,6 +81,10 @@ public class QLTTKho extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nhap:
+                Intent intent =new Intent(QLTTKho.this,Nhapvattuvaokho.class);
+                intent.putExtra("MAKHO",maKho);
+                intent.putExtra("TENKHO",tenKho);
+                startActivity(intent);
                 break;
             case R.id.xuat:
                 break;
@@ -119,13 +124,13 @@ public class QLTTKho extends AppCompatActivity {
         Cursor cursor = database.rawQuery("Select * from KHO WHERE MAKHO=?", new String[]{maKho});
         cursor.moveToFirst();
         list_ttKho.clear();
-        String maKho = cursor.getString(0);
-        String tenKho = cursor.getString(1);
+        maKho = cursor.getString(0);
+        tenKho = cursor.getString(1);
         tv_makho.setText("Mã kho: " + maKho);
         tv_tenkho.setText("Tên kho: " + tenKho);
 
         Cursor cursorVT = database.rawQuery("Select * from VATTU", null);
-        Cursor cursorChose = database.rawQuery("Select * from CHITIETKHO WHERE CHITIETKHO.MAKHO=? ORDER BY SOLUONG DESC", new String[]{maKho});
+        Cursor cursorChose = database.rawQuery("Select CHITIETKHO.*,VATTU.DVT from CHITIETKHO,VATTU WHERE CHITIETKHO.MAKHO=? AND CHITIETKHO.MAVT = VATTU.MAVT ORDER BY SOLUONG DESC", new String[]{maKho});
         for (int j = 0; j < cursorChose.getCount(); j++) {
             cursorChose.moveToPosition(j);
             dvt = cursorChose.getString(3);

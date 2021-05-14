@@ -7,7 +7,7 @@
     android:background="@drawable/background">
 
     <TextView
-        android:id="@+id/tv_ttTenKho"
+        android:id="@+id/tv_nhapXuat_tenKho"
         android:layout_width="156dp"
         android:layout_height="47dp"
         android:gravity="center"
@@ -20,16 +20,16 @@
         app:layout_constraintVertical_bias="0.028" />
 
     <TextView
-        android:id="@+id/tv_ttMaKho"
+        android:id="@+id/tv_nhapXuat_maKho"
         android:layout_width="160dp"
         android:layout_height="47dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:gravity="center"
         android:text="Mã kho: "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toEndOf="@+id/tv_ttTenKho"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,19 +45,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageButton
-        android:id="@+id/lua_chon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/drawable_hinhtron"
-        android:paddingTop="7dp"
-        android:src="@drawable/add"
-        app:backgroundTint="@color/teal_200"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

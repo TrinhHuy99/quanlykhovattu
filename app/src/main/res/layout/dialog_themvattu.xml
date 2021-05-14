@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pink_top_left_top_right"
+        android:gravity="center"
+        android:padding="12px"
+        android:text="PHIẾU NHẬP KHO"
+        android:textColor="@color/black"
+        android:textSize="16dp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="THÊM PHIẾU NHẬP"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:background="@drawable/bg_gray">
+
+            </Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dvt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_gray"
+            android:hint="Đơn vị tính"
+            android:padding="12dp">
+
+        </TextView>
+        <EditText
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_gray"
+            android:hint="Số lượng"
+            android:padding="12dp">
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/huy_vt_kho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_red_10"
+                android:text="Hủy"
+                android:textSize="16dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/themvt_kho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_blue_10"
+                android:text="Thêm"
+                android:textSize="16dp">
+
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

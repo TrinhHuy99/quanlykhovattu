@@ -30,7 +30,7 @@ public class AddVattu extends AppCompatActivity {
     final int REQUEST_TAKE_PHOTO=123;
     final int REQUEST_CHOOSE_PHOTO=321;
     Button btn_Luu, btn_Thoat,chonhinh,chuphinh;
-    EditText edt_Mavt,edt_Ten, edt_Xuatxu;
+    EditText edt_Mavt,edt_Ten, edt_Xuatxu,edt_dvt;
     ImageView hinhvattu;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -77,6 +77,7 @@ public class AddVattu extends AppCompatActivity {
         edt_Mavt=findViewById(R.id.mvt);
         edt_Ten = findViewById(R.id.tvt);
         edt_Xuatxu = findViewById(R.id.xx);
+        edt_dvt = findViewById(R.id.dvt);
         chonhinh = findViewById(R.id.btn_chonhinhvt);
         chuphinh = findViewById(R.id.btn_chuphinhvt);
         hinhvattu=findViewById(R.id.hinh_addvt);
@@ -99,12 +100,14 @@ public class AddVattu extends AppCompatActivity {
         String mavt=edt_Mavt.getText().toString();
         String ten = edt_Ten.getText().toString();
         String xuatxu = edt_Xuatxu.getText().toString();
+        String dvt = edt_dvt.getText().toString();
         byte [] hinh=getByteArrayFromImageView(hinhvattu);
         ContentValues contentValues = new ContentValues();
         contentValues.put("MAVT",mavt);
         contentValues.put("TENVT", ten);
         contentValues.put("XUATXU", xuatxu);
         contentValues.put("HINH", hinh);
+        contentValues.put("DVT",dvt);
         SQLiteDatabase database = Database.initDatabase(this, "QUANLYKHOVATTU.db");
         database.insert("VATTU",null, contentValues );
         Intent intent = new Intent(this, MainActivity_vattu.class);

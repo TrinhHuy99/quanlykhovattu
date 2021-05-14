@@ -8,16 +8,27 @@
     tools:context=".UpdateVattu">
 
     <EditText
-        android:id="@+id/editTextTen"
+        android:id="@+id/editTextDVT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="172dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewTen"
-        app:layout_constraintTop_toBottomOf="@+id/hinh_kho" />
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/textViewXuatXu"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTen" />
+
+    <EditText
+    android:id="@+id/editTextTen"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textViewTen"
+    app:layout_constraintTop_toBottomOf="@+id/hinh_kho" />
 
     <EditText
         android:id="@+id/editTextXuatXu"
@@ -26,7 +37,6 @@
         android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toEndOf="@+id/textViewXuatXu"
@@ -124,5 +134,16 @@
         app:layout_constraintStart_toEndOf="@+id/hinh_kho"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="80dp"
+        android:text="Đơn vị tính"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewXuatXu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

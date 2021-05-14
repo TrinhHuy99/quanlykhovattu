@@ -48,7 +48,8 @@ public class AdapterVatTu extends BaseAdapter {
         View row = inflater.inflate(R.layout.danhsachvattu, null);
         TextView tv_maVT = row.findViewById(R.id.tv_maVT);
         TextView tv_tenVT = row.findViewById(R.id.tv_tenVT);
-        TextView tv_xx = row.findViewById(R.id.tv_dvt);
+        TextView tv_xx = row.findViewById(R.id.tv_xuatxu);
+        TextView tv_dvt = row.findViewById(R.id.tv_dvt);
         Button btn_sua = row.findViewById(R.id.btn_sua);
         Button btn_xoa = row.findViewById(R.id.btn_xoa);
         ImageView hinh = row.findViewById(R.id.img_vattu);
@@ -58,6 +59,7 @@ public class AdapterVatTu extends BaseAdapter {
         tv_maVT.setText("Mã VT: " + vattu.MaVT);
         tv_tenVT.setText("Tên VT: " + vattu.TenVT);
         tv_xx.setText("Xuất xứ: " + vattu.XuatXu);
+        tv_dvt.setText("Đơn vị tính: " + vattu.DVT);
         Bitmap hinhVattu = BitmapFactory.decodeByteArray(vattu.hinh, 0 , vattu.hinh.length);
         hinh.setImageBitmap(hinhVattu);
 
@@ -105,7 +107,8 @@ public class AdapterVatTu extends BaseAdapter {
             String tenvt=cursor.getString(1);
             String xuatxu=cursor.getString(2);
             byte[] hinh = cursor.getBlob(3);
-            list.add(new Vattu(mavt,tenvt,xuatxu,hinh));
+            String dvt=cursor.getString(4);
+            list.add(new Vattu(mavt,tenvt,xuatxu,hinh,dvt));
         }
         notifyDataSetChanged();
     }

@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="414dp"
-        android:layout_height="190dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="10dp"
         android:background="#FBE8E8"
         android:orientation="horizontal"
@@ -16,9 +16,9 @@
         tools:layout_editor_absoluteY="60dp">
 
         <ImageView
-            android:id="@+id/img_vattu"
-            android:layout_width="159dp"
-            android:layout_height="159dp"
+            android:id="@+id/img_vattu_pn"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_marginRight="10sp"
             android:scaleType="fitXY"
             tools:srcCompat="@tools:sample/avatars" />
@@ -29,32 +29,24 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_maVT"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:gravity="center_vertical"
-                android:text="Mã VT: " />
-
-            <TextView
-                android:id="@+id/tv_tenVT"
+                android:id="@+id/tv_tenvt_pn"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:gravity="center_vertical"
                 android:text="Tên VT: " />
-
             <TextView
-                android:id="@+id/tv_xuatxu"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:gravity="center_vertical"
-                android:text="Xuất Xứ: " />
-
-            <TextView
-                android:id="@+id/tv_dvt"
+                android:id="@+id/tv_dvtvt_pn"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:gravity="center_vertical"
                 android:text="Đơn vị tính: " />
+
+            <TextView
+                android:id="@+id/tv_slvt_pn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:text="Số lượng: " />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,7 +55,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_xoa"
+                    android:id="@+id/btn_xoavt"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10sp"
@@ -73,7 +65,7 @@
                     app:backgroundTint="@android:color/holo_red_light" />
 
                 <Button
-                    android:id="@+id/btn_sua"
+                    android:id="@+id/btn_suavt"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10sp"

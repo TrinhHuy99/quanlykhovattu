@@ -95,9 +95,10 @@ public class MainActivity_vattu extends AppCompatActivity {
             cursor.moveToPosition(i);
             String maVT = cursor.getString(0);
             String tenVT = cursor.getString(1);
-            String xuatXu = cursor.getString(2);
+            String xuatxu=cursor.getString(2);
             byte[] hinh = cursor.getBlob(3);
-            list_VT.add(new Vattu(maVT,tenVT,xuatXu,hinh));
+            String dvt=cursor.getString(4);
+            list_VT.add(new Vattu(maVT,tenVT,xuatxu,hinh,dvt));
         }
         adapterVatTu.notifyDataSetChanged();
     }

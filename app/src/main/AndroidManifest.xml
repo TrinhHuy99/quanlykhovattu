@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QUANLINHAPKHO">
-        <activity android:name=".AddKho"></activity>
+        <activity android:name=".ThemPhieuNhap"></activity>
+        <activity android:name=".Nhapvattuvaokho" />
+        <activity android:name=".AddKho" />
         <activity android:name=".AddVattu" />
         <activity android:name=".UpdateVattu" />
+        <activity android:name=".QLPhieuNhap" />
+        <activity android:name=".QLPhieuXuat" />
+        <activity android:name=".QLTTPhieuNhap" />
+        <activity android:name=".QLTTPhieuXuat" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,41 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity_Dangnhap">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity_vattu">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".QuanLyKho">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".UpdateKho">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".QLTTKho">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity_Dangnhap"></activity>
+        <activity android:name=".MainActivity_vattu"></activity>
+        <activity android:name=".QuanLyKho"></activity>
+        <activity android:name=".UpdateKho"></activity>
+        <activity android:name=".QLTTKho"></activity>
     </application>
 
 </manifest>

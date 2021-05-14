@@ -31,7 +31,7 @@ public class UpdateVattu extends AppCompatActivity {
     final int REQUEST_TAKE_PHOTO = 123;
     final int REQUEST_CHOOSE_PHOTO = 321;
     Button btn_Luu, btn_Thoat,chonhinh,chuphinh;
-    EditText edt_Ten, edt_Xuatxu;
+    EditText edt_Ten, edt_Xuatxu,edt_DVT;
     ImageView hinhvattu;
     String maVt = null;
     @Override
@@ -78,6 +78,7 @@ public class UpdateVattu extends AppCompatActivity {
         btn_Thoat = findViewById(R.id.buttonThoat);
         edt_Ten = findViewById(R.id.editTextTen);
         edt_Xuatxu = findViewById(R.id.editTextXuatXu);
+        edt_DVT = findViewById(R.id.editTextDVT);
         chuphinh=findViewById(R.id.btn_chuphinhvt);
         chonhinh=findViewById(R.id.btn_chonhinhvt);
         hinhvattu=findViewById(R.id.hinh_kho);
@@ -108,21 +109,25 @@ public class UpdateVattu extends AppCompatActivity {
         String ten = cursor.getString(1);
         String xuatXu = cursor.getString(2);
         byte[] hinh = cursor.getBlob(3);
+        String DVT = cursor.getString(4);
 
         Bitmap bitmap = BitmapFactory.decodeByteArray(hinh, 0, hinh.length);
         hinhvattu.setImageBitmap(bitmap);
         edt_Ten.setText(ten);
         edt_Xuatxu.setText(xuatXu);
+        edt_DVT.setText(DVT);
     }
 
     private void Update() {
         String ten = edt_Ten.getText().toString();
         String xuatxu = edt_Xuatxu.getText().toString();
+        String dvt = edt_DVT.getText().toString();
         byte [] hinh=getByteArrayFromImageView(hinhvattu);
         ContentValues contentValues = new ContentValues();
         contentValues.put("TENVT", ten);
         contentValues.put("XUATXU", xuatxu);
         contentValues.put("HINH", hinh);
+        contentValues.put("DVT",dvt);
         SQLiteDatabase database = Database.initDatabase(this, "QUANLYKHOVATTU.db");
         database.update("VATTU", contentValues, "MAVT=?", new String[]{maVt});
         Intent intent = new Intent(this, MainActivity_vattu.class);
